@@ -1,4 +1,4 @@
-@name Julys Holo e2m E2
+@name Julys Holo e2m E2 (Plubic)
 @inputs [Entity]:entity Bodye2m:entity                   #make sure to wire this to the base prop
 @persist E:entity
 @trigger none
