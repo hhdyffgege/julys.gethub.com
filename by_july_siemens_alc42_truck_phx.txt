@@ -1,0 +1,40 @@
+@name BY july siemens alc42 truck PHX
+@model models/magtrainslocos/trucks/blomberg_b_phx.mdl
+
+#runOnTick(30)
+if(first()|dupefinished()){
+
+
+#Orgnal maker July and TS200_AlphaGibbon edit done by AZ
+
+#print("EMU and de30ac loco bogey v1 PRIVATE")
+
+}
+
+        E=entity()
+
+    holoCreate(1,E:toWorld(vec(-10.1,0,-25.2)),vec(1,1,1),E:angles(),vec(255),"models/fox/siemens_alc42_truck.mdl")
+    holoParent(1,E)
+    holoClipEnabled(1,1,1)
+    holoClip(1,1,vec(0,0,0),vec(0,90,0),0)
+
+    holoCreate(2,E:toWorld(vec(10.1,0,-25.2)),vec(1,1,1),E:angles(),vec(255),"models/fox/siemens_alc42_truck.mdl")
+    holoParent(2,E)
+    holoClipEnabled(2,1,1)
+    holoClip(2,1,vec(0,0,0),vec(0,-90,0),0)
+    
+#///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+E:setAlpha(0)
+
+
+
+
+holoAng(1,entity():toWorld(ang(0,90,0)))
+
+
+ holoAng(2,entity():toWorld(ang(0,90,0)))
+
+

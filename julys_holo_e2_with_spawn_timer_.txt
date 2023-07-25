@@ -1,0 +1,31 @@
+@name July's Holo E2 with spawn timer 
+@inputs [Entity]:entity #make sure to wire this to the base prop
+@persist E:entity
+@trigger none
+
+#Julys Holo E2 with spawn timer 
+
+if(first() | dupefinished())
+{
+    timer("spawn",2000) #Time it takes to spawn
+}
+if(clk("spawn")) #
+{
+   Entity:setAlpha(0) #transparency of Base prop.
+            
+    A = 1
+    holoCreate(A)
+    holoParent(A,Entity)
+    holoModel(A, "")
+    holoPos(A,Entity:toWorld(vec(0,0,0)))
+    holoScale(A,vec(1,1,1))
+    holoAng(A,Entity:toWorld(ang(0,0,0)))
+    holoColor(A,vec(255,255,255))
+    holoClipEnabled(A,0,1)
+    holoClip(A,1,vec(0,0,0),vec(0,0,1),0)
+    holoEntity(A):setSubMaterial(1,"")
+    holoEntity(A):setSubMaterial(1,"")  
+    holoEntity(A):setSubMaterial(1,"")
+    holoBodygroup(A,1,1)  
+    
+}

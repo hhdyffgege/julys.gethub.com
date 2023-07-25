@@ -1,0 +1,36 @@
+@name Julys Holo e2m E2
+@inputs [Entity]:entity Bodye2m:entity                   #make sure to wire this to the base prop
+@persist E:entity
+@trigger none
+
+#JULY IS COOL!
+
+
+   Entity:setAlpha(255) #transparency of Base prop.
+     
+    
+    A= 1 #A++
+    holoCreate(A)
+    holoParent(A,Entity)
+    holoModel(A,"") #The model
+    holoPos(A,Entity:toWorld(vec(171,0,10))) #The position of the model
+    holoScale(A,vec(1,1,1)) #Scal of the Model
+    holoAng(A,Entity:toWorld(ang(0,0,0))) #World angle of the model
+    holoColor(A,vec(0,0,0)) #color
+    holoBodygroup(A,0,0)
+#   holoClipEnabled(A,1,1)
+#   holoClip(A,1,vec(0,0,0),vec(0,0,0),0)    
+    holoEntity(A):setSubMaterial(1,"") #Mat
+
+
+#P2M OoO
+local P2M = p2mCreate(A,Bodye2m:pos(), Bodye2m:angles()) #How many Controllers, Position, Angle
+
+P2M:p2mPushModel(A,"", vec(0,0,0), ang(0,90,0), vec(0,0,0), 0, 0, array(vec(0,0,0),vec(0,0,0))) #Controller Index, Models, Positon, Angle, Scale, Render Inside, Render Flat, Clips
+#             Model^     Pose^           ^angle       ^ scal              clip ^    clip ^
+
+P2M:p2mBuild()
+P2M:parentTo(Bodye2m)
+P2M:p2mSetMaterial(A,"models/proppertextures/brass") #Controller Index, Material
+P2M:p2mSetColor(A,vec(255,255,255)) #Controller Index, Colour
+
