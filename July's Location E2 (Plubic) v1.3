@@ -1,0 +1,491 @@
+@name July's Location E2 (Plubic) v1.3
+@persist Prefix:string Prefix2:string Prefix3:string Prefix4:string  Prefix5:string  Prefix6:string Prefix7:string Prefix8:string Prefix9:string Prefix10:string Prefix11:string Prefix12:string Prefix13:string Prefix14:string Prefix15:string Prefix16:string  Prefix17:string Prefix18:string Prefix19:string Prefix20:string Prefix21:string Prefix22:string  Prefix23:string  Prefix24:string Prefix25:string Prefix26:string Prefix27:string Prefix28:string Prefix29:string Prefix30:string Prefix31:string Prefix32:string Prefix33:string Prefix34:string Prefix35:string Prefix36:string Prefix37:string Prefix38:string Prefix39:string Prefix40:string Prefix41:string Prefix42:string Prefix43:string Prefix44:string Prefix45:string Prefix46:string Prefix47:string Prefix48:string Prefix49:string Prefix50:string Prefix51:string Prefix52:string Prefix53:string Prefix54:string Prefix55:string Prefix56:string Prefix57:string Prefix58:string Prefix59:string Prefix60:string Prefix61:string Prefix62:string Prefix63:string Prefix64:string Prefix65:string Prefix66:string Prefix67:string Prefix68:string Prefix69:string Prefix70:string Prefix71:string Prefix72:string Prefix73:string Prefix74:string Prefix75:string Prefix76:string  Color:vector UsernameName:string
+
+UsernameName= "July" # YOUR USERNAME
+TextColor= vec(255,200,0)
+
+if(first()|dupefinished()|duped()){
+runOnChat(1) chatPrint(vec(255),""+ owner():toString() +  "")
+
+###########################
+
+Prefix= ".wo" # Wolfram
+Prefix2= ".dr" # Dragon's Rock
+Prefix3= ".re" # Redwall
+Prefix4= ".ka" # Kahuna
+Prefix5= ".de" # Derrickson
+Prefix6= ".cr" # Crucible
+Prefix7= ".ro" # Rockfort
+Prefix8= ".ra" # Rainbow River
+Prefix9= ".gu" # Gunga
+
+################################
+
+Prefix10= ".bl" # Black Rock
+Prefix11= ".cl" # Crystal Lake
+Prefix12= ".kl" # Kahuna Industrial
+Prefix13= ".ws" # Wolfram Station
+Prefix14= ".rs" # Rockford Station
+Prefix15= ".rs" # redwall Station
+Prefix16= ".ks" # Kahuna Station
+Prefix17= ".cs" # Crucible Station
+Prefix18= ".av" # Arrows Valley
+Prefix19= ".db" # Double Bridges
+Prefix20= ".ds"  # Derrickson singletrack section
+Prefix21= ".wt" # Wolfram Transfer Table
+
+#################################
+
+Prefix22= ".etg" # Entering The Gulch
+Prefix23= ".xtg" # Exiting The Gulch
+Prefix24= ".esb" # Entering Sandstone Branch
+Prefix25= ".esb" # BlackRock Scrap Yard
+Prefix26= ".rnp" # Redwall Northern Patrol
+Prefix27= ".sbp" # Sandstone Branch Coal Refinery
+Prefix28= ".dei" # Derrickson Industrial
+Prefix29= ".def" # Derrickson Farms
+Prefix30= ".wrs" # Wolfram refueling station
+
+################################
+#departing
+
+Prefix31= ".dwo" # Departing Wolfram
+Prefix32= ".ddr" # Departing Dragon's Rock
+Prefix33= ".dre" # Departing Redwall
+Prefix34= ".dka" # Departing Kahuna
+Prefix35= ".dde" # Departing Derrickson
+Prefix36= ".dcr" # Departing Crucible
+Prefix37= ".dro" # Departing Rockfort
+Prefix38= ".dra" # Departing Rainbow River has finished crew change out 
+Prefix39= ".dgu" # Departing Gunga
+Prefix40= ".dbl" # Departing Black Rock
+Prefix41= ".dcl" # Departing Crystal Lake
+Prefix42= ".dkl" # Departing Kahuna Industrial
+
+Prefix43= ".dws" # Departing Wolfram Station
+Prefix44= ".drs" # Departing Rockford Station
+Prefix45= ".drs" # Departing redwall Station
+Prefix46= ".dks" # Departing Kahuna Station
+Prefix47= ".dcs" # Departing Crucible Station
+
+#Prefix48= ".Unused" # N/A
+
+Prefix49= ".desb" # Departing BlackRock Scrap Yard
+Prefix50= ".drnp" # Departing Redwall Northern Patrol
+Prefix51= ".dsbp" # Departing Sandstone Branch Coal Refinery
+Prefix52= ".ddei" # Departing Derrickson Industrial
+Prefix53= ".ddef" # Departing Derrickson Farms
+
+
+################################
+#Entering
+
+Prefix54= ".dwo" # Entering Wolfram
+Prefix55= ".ddr" # Entering Dragon's Rock
+Prefix56= ".dre" # Entering Redwall
+Prefix57= ".dka" # Entering Kahuna
+Prefix58= ".dde" # Entering Derrickson
+Prefix59= ".dcr" # Entering Crucible
+Prefix60= ".dro" # Entering Rockfort
+Prefix61= ".dra" # Entering Rainbow River
+Prefix62= ".dgu" # Entering Gunga
+Prefix63= ".dbl" # Entering Black Rock
+Prefix64= ".dcl" # Entering Crystal Lake
+Prefix65= ".dkl" # Entering Kahuna Industrial
+
+Prefix66= ".dws" # Entering Wolfram Station
+Prefix67= ".drs" # Entering Rockford Station
+Prefix68= ".drs" # Entering redwall Station
+Prefix69= ".dks" # Entering Kahuna Station
+Prefix70= ".dcs" # Entering Crucible Station
+
+#Prefix71= ".Unused" # N/A
+
+Prefix72= ".desb" # Entering BlackRock Scrap Yard
+Prefix73= ".drnp" # Entering Redwall Northern Patrol
+Prefix74= ".dsbp" # Entering Sandstone Branch Coal Refinery
+Prefix75= ".ddei" # Entering Derrickson Industrial
+Prefix76= ".ddef" # Entering Derrickson Farms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chatPrint(vec(255), owner():toString() + " ", vec(255), ""+ UsernameName + ".")
+
+
+Color= vec(255,255,255) #Change the Color here by entering the Color Code in the Parentheses.
+##################
+# Do Not Touch! ###
+##################################################################
+}elseif(chatClk(owner())){                                       
+local Spoke=lastSaid():explode(" ")                              
+if(Spoke[1,string]==Prefix){                                       
+local Spoke=lastSaid():sub(Prefix:length()+1)                    
+chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Wolfram", (TextColor))    
+
+} elseif (Spoke[1, string] == Prefix2) {
+    local Spoke=lastSaid():sub(Prefix2:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Dragon's rock.", (TextColor)) 
+           
+} elseif (Spoke[1, string] == Prefix3) {
+    local Spoke=lastSaid():sub(Prefix3:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at redwall.", (TextColor))      
+
+} elseif (Spoke[1, string] == Prefix4) {
+    local Spoke=lastSaid():sub(Prefix4:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Kahuna.", (TextColor))      
+
+} elseif (Spoke[1, string] == Prefix5) {
+    local Spoke=lastSaid():sub(Prefix5:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Derrickson.", (TextColor))  
+
+} elseif (Spoke[1, string] == Prefix6) {
+    local Spoke=lastSaid():sub(Prefix6:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Crucible.", (TextColor))  
+
+} elseif (Spoke[1, string] == Prefix7) {
+    local Spoke=lastSaid():sub(Prefix7:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Rockfort.", (TextColor))  
+
+} elseif (Spoke[1, string] == Prefix8) {
+    local Spoke=lastSaid():sub(Prefix8:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Rainbow River.", (TextColor))  
+    
+} elseif (Spoke[1, string] == Prefix9) {
+    local Spoke=lastSaid():sub(Prefix9:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Gunga Yard.", (TextColor))  
+    
+} elseif (Spoke[1, string] == Prefix10) {
+    local Spoke=lastSaid():sub(Prefix10:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Black Rock.", (TextColor))  
+   
+
+} elseif (Spoke[1, string] == Prefix11) {
+    local Spoke=lastSaid():sub(Prefix11:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Crystal Lake.", (TextColor))  
+    
+} elseif (Spoke[1, string] == Prefix12) {
+    local Spoke=lastSaid():sub(Prefix12:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Kahuna Industrial.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix13) {
+    local Spoke=lastSaid():sub(Prefix13:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Wolfram Station.", (TextColor))     
+
+} elseif (Spoke[1, string] == Prefix14) {
+    local Spoke=lastSaid():sub(Prefix14:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Rockford Station.", (TextColor))  
+
+} elseif (Spoke[1, string] == Prefix15) {
+    local Spoke=lastSaid():sub(Prefix15:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Redwall Station.", (TextColor))  
+    
+} elseif (Spoke[1, string] == Prefix16) {
+    local Spoke=lastSaid():sub(Prefix16:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Kahuna Station.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix17) {
+    local Spoke=lastSaid():sub(Prefix17:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Crucible Station.", (TextColor))  
+    
+} elseif (Spoke[1, string] == Prefix18) {
+    local Spoke=lastSaid():sub(Prefix18:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Arrows Falley.", (TextColor))  
+    
+} elseif (Spoke[1, string] == Prefix19) {
+    local Spoke=lastSaid():sub(Prefix19:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Double Bridges.", (TextColor)) 
+    
+} elseif (Spoke[1, string] == Prefix20) {
+    local Spoke=lastSaid():sub(Prefix20:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently Entering Derrickson Singletrack Section.", (TextColor))     
+    
+} elseif (Spoke[1, string] == Prefix21) {
+    local Spoke=lastSaid():sub(Prefix21:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently using the transfer table at Wolfram Yard.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix22) {
+    local Spoke=lastSaid():sub(Prefix22:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently Entering The Gulch.", (TextColor))    
+    
+} elseif (Spoke[1, string] == Prefix23) {
+    local Spoke=lastSaid():sub(Prefix23:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently Exiting The Gulch.", (TextColor))     
+    
+} elseif (Spoke[1, string] == Prefix24) {
+    local Spoke=lastSaid():sub(Prefix24:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently Entering Sandstone Branch.", (TextColor))          
+    
+} elseif (Spoke[1, string] == Prefix25) {
+    local Spoke=lastSaid():sub(Prefix25:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at BlackRock Scrap Yard.", (TextColor))            
+    
+} elseif (Spoke[1, string] == Prefix26) {
+    local Spoke=lastSaid():sub(Prefix26:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Redwall Northern Patrol.", (TextColor))     
+    
+} elseif (Spoke[1, string] == Prefix27) {
+    local Spoke=lastSaid():sub(Prefix27:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Sandstone Branch Coal Refinery.", (TextColor))     
+        
+} elseif (Spoke[1, string] == Prefix28) {
+    local Spoke=lastSaid():sub(Prefix28:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Derrickson Industrial.", (TextColor))    
+    
+} elseif (Spoke[1, string] == Prefix29) {
+    local Spoke=lastSaid():sub(Prefix29:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Derrickson Farms.", (TextColor))    
+   
+} elseif (Spoke[1, string] == Prefix30) {
+    local Spoke=lastSaid():sub(Prefix30:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Currently at Wolfram Refueling Station.", (TextColor))    
+    
+######################################
+
+} elseif (Spoke[1, string] == Prefix31) {
+    local Spoke=lastSaid():sub(Prefix31:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Wolfram.", (TextColor))    
+
+} elseif (Spoke[1, string] == Prefix32) {
+    local Spoke=lastSaid():sub(Prefix32:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Dragon's Rock.", (TextColor))    
+    
+} elseif (Spoke[1, string] == Prefix33) {
+    local Spoke=lastSaid():sub(Prefix33:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Redwall.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix34) {
+    local Spoke=lastSaid():sub(Prefix34:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Kahuna.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix35) {
+    local Spoke=lastSaid():sub(Prefix35:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Derrickson.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix36) {
+    local Spoke=lastSaid():sub(Prefix36:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Crucible.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix37) {
+    local Spoke=lastSaid():sub(Prefix37:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Rockfort.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix38) {
+    local Spoke=lastSaid():sub(Prefix38:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Has completed the crew change out and is departing at Rainbow River currently.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix39) {
+    local Spoke=lastSaid():sub(Prefix39:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Gunga Yard.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix40) {
+    local Spoke=lastSaid():sub(Prefix40:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Black Rock.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix41) {
+    local Spoke=lastSaid():sub(Prefix41:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Crystal Lake.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix42) {
+    local Spoke=lastSaid():sub(Prefix42:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Kahuna Industrial.", (TextColor))      
+    
+######################################################################################################
+    
+} elseif (Spoke[1, string] == Prefix43) {
+    local Spoke=lastSaid():sub(Prefix43:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Wolfram Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix44) {
+    local Spoke=lastSaid():sub(Prefix44:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Rockford Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix45) {
+    local Spoke=lastSaid():sub(Prefix45:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Redwall Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix46) {
+    local Spoke=lastSaid():sub(Prefix46:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Kahuna Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix47) {
+    local Spoke=lastSaid():sub(Prefix47:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Crucible Station.", (TextColor))        
+    
+######################################################################################################
+
+
+} elseif (Spoke[1, string] == Prefix48) {
+    local Spoke=lastSaid():sub(Prefix48:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": .", (TextColor))      
+    
+######################################################################################################
+
+} elseif (Spoke[1, string] == Prefix49) {
+    local Spoke=lastSaid():sub(Prefix49:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing BlackRock Scrap Yard.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix50) {
+    local Spoke=lastSaid():sub(Prefix50:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Redwall Northern Patrol=.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix51) {
+    local Spoke=lastSaid():sub(Prefix51:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Sandstone Branch Power Plant.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix52) {
+    local Spoke=lastSaid():sub(Prefix52:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Derrickson Industrial.", (TextColor))      
+
+} elseif (Spoke[1, string] == Prefix53) {
+    local Spoke=lastSaid():sub(Prefix53:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Departing Derrickson Farms.", (TextColor))      
+    
+######################################################################################################
+######################################################################################################
+######################################################################################################  
+######################################################################################################
+######################################################################################################
+######################################################################################################
+#Entering
+
+} elseif (Spoke[1, string] == Prefix54) {
+    local Spoke=lastSaid():sub(Prefix54:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Wolfram.", (TextColor))    
+
+} elseif (Spoke[1, string] == Prefix55) {
+    local Spoke=lastSaid():sub(Prefix55:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Dragon's Rock.", (TextColor))    
+    
+} elseif (Spoke[1, string] == Prefix56) {
+    local Spoke=lastSaid():sub(Prefix56:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Redwall.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix57) {
+    local Spoke=lastSaid():sub(Prefix57:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Kahuna.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix58) {
+    local Spoke=lastSaid():sub(Prefix58:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Derrickson.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix59) {
+    local Spoke=lastSaid():sub(Prefix59:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Crucible.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix60) {
+    local Spoke=lastSaid():sub(Prefix60:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Rockfort.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix61) {
+    local Spoke=lastSaid():sub(Prefix61:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is going to stop in Rainbow River for a crew change out.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix62) {
+    local Spoke=lastSaid():sub(Prefix62:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Gunga Yard.", (TextColor))   
+    
+} elseif (Spoke[1, string] == Prefix63) {
+    local Spoke=lastSaid():sub(Prefix63:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Black Rock.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix64) {
+    local Spoke=lastSaid():sub(Prefix64:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Crystal Lake.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix65) {
+    local Spoke=lastSaid():sub(Prefix65:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Kahuna Industrial.", (TextColor))      
+    
+######################################################################################################
+    
+} elseif (Spoke[1, string] == Prefix66) {
+    local Spoke=lastSaid():sub(Prefix66:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Wolfram Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix67) {
+    local Spoke=lastSaid():sub(Prefix67:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Rockford Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix68) {
+    local Spoke=lastSaid():sub(Prefix68:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Redwall Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix69) {
+    local Spoke=lastSaid():sub(Prefix69:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Kahuna Station.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix70) {
+    local Spoke=lastSaid():sub(Prefix70:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Crucible Station.", (TextColor))        
+    
+######################################################################################################
+
+
+} elseif (Spoke[1, string] == Prefix71) {
+    local Spoke=lastSaid():sub(Prefix71:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": .", (TextColor))      
+    
+######################################################################################################
+
+} elseif (Spoke[1, string] == Prefix72) {
+    local Spoke=lastSaid():sub(Prefix72:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering BlackRock Scrap Yard.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix73) {
+    local Spoke=lastSaid():sub(Prefix73:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Redwall Northern Patrol=.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix74) {
+    local Spoke=lastSaid():sub(Prefix74:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Sandstone Branch Coal Refinery.", (TextColor))      
+    
+} elseif (Spoke[1, string] == Prefix75) {
+    local Spoke=lastSaid():sub(Prefix75:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Derrickson Industrial.", (TextColor))      
+
+} elseif (Spoke[1, string] == Prefix76) {
+    local Spoke=lastSaid():sub(Prefix76:length()+1)                    
+    chatPrint(Color, UsernameName, (TextColor), ": Is Now Entering Derrickson Farms.", (TextColor))      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+hideChat(1)                                                      
+}                                                                
+}                                                                
+
+
+
+
+
+
+
+
+
+
+
+setName("July's Location E2 Has Sawned " +" ( " + UsernameName + " ) ")
