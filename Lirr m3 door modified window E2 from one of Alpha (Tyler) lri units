@@ -1,0 +1,101 @@
+@name Lirr m3 door modified window E2 from one of Alpha (Tyler) lri units
+@inputs Cycle B Alphain1 Alphain2 Cycle2  Color:vector
+@outputs C 
+@persist B C D Alphain1 Alphain2 GlassAlpha
+@trigger 
+#credits this is a heavily modified window E2 from one of Alpha (Tyler) lri units i july do not take credit for code below line 60 
+Speed = 150
+
+Spaceing = 15
+
+
+
+
+
+if(first()|dupefinished()){
+    
+
+        A=0
+    holoCreate(A,entity():toWorld(vec(-30,3.5,-2.8)),vec(1),entity():toWorld(ang(0,90,0)),vec(0),"models/botzmpak/parts/m1_door.mdl")
+    holoParent(A,entity())
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/aluminum")
+    holoColor(A, vec(200))    
+        A=1
+    holoCreate(A,entity():toWorld(vec(-30,7,-3)),vec(1),entity():toWorld(ang(0,90,0)),vec(0),"models/botzmpak/parts/m1_door.mdl")
+    holoParent(A,entity())
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/aluminum")
+    holoColor(A, vec(200))
+
+    A=2
+    holoCreate(A,entity():toWorld(vec(-29.7,4.7,46)),vec(4.8,3,0.4),entity():toWorld(ang(86,0,0)),vec(0),"models/sprops/rectangles/size_2_5/rect_18x30x3.mdl")
+    holoParent(A,holoEntity(0))
+    holoScale(A, vec(1.1,0.95,0.01))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/acrylic")
+    holoColor(A, vec(0))
+    holoAlpha(A,200)
+    
+    A=3
+    holoCreate(A,entity():toWorld(vec(-29.7,8,46)),vec(4.8,3,0.4),entity():toWorld(ang(86,0,0)),vec(0),"models/sprops/rectangles/size_2_5/rect_18x30x3.mdl")
+    holoParent(A,holoEntity(1))
+    holoScale(A, vec(1.1,0.95,0.01))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/acrylic")
+    holoColor(A, vec(0))
+    holoAlpha(A,200)
+        
+    A=4
+    holoParent(A,entity())
+    holoAlpha(A,250)
+    holoMaterial(A,"models/proppertextures/acrylic")
+    holoClipEnabled(A,1,1)
+    holoClip(A,1,vec(0,0,-0.001),vec(0,0,-1),0)
+
+    A=5
+    holoParent(A,entity())
+    holoAlpha(A,250)
+    holoMaterial(A,"models/proppertextures/acrylic")
+    holoClipEnabled(A,1,1)
+    holoClip(A,1,vec(0,0,-0.001),vec(0,0,-1),0)
+    
+    
+    A=6
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(-30,5,46))) #leave this as it is unless you know what your doing.
+holoModel(A, "plane") #This is your base holo model
+    holoParent(A,holoEntity(0))
+holoAng(A, entity():toWorld(ang(86,0,0)) ) #This var adjusts the angle relative to the world spawn in X, Y, Z
+holoScale(A, vec(0.5)) #This var adjusts the scale of the logo in X, Y, Z
+holoMaterial(A,"botzmpak/railroads/lirr/watch_the_gap") #Change this varible to whatever logo file name you want.
+holoColor(A,  vec(255))
+#holoColor(Alpha, vec()) #Enable this line IF you want to color a logo that spawns white.
+
+    A=7
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(-30,8,46))) #leave this as it is unless you know what your doing.
+holoModel(A, "plane") #This is your base holo model
+    holoParent(A,holoEntity(1))
+holoAng(A, entity():toWorld(ang(86,0,0)) ) #This var adjusts the angle relative to the world spawn in X, Y, Z
+holoScale(A, vec(0.5)) #This var adjusts the scale of the logo in X, Y, Z
+holoMaterial(A,"botzmpak/railroads/lirr/watch_the_gap") #Change this varible to whatever logo file name you want.
+holoColor(A,  vec(255))
+}
+
+
+if((Cycle&~Cycle)|Cycle2&~Cycle2){C++     soundPlay(0,0,"ui/cyoa_ping_available.wav")} if(C>1){C=0}
+
+
+
+if(!C&D<10){D++
+    interval(Speed)}
+if(C&D>-Spaceing){D--
+    interval(Speed)}
+holoPos(0,entity():toWorld(vec(0,-D+24.7,-2)))
+holoPos(1,entity():toWorld(vec(0,D-20,-2)))
+GlassAlpha=Alphain1+Alphain2
+holoAlpha(0,255-GlassAlpha/2)
+holoAlpha(1,255-GlassAlpha/2)
+holoAlpha(4,255-GlassAlpha/2)
+holoAlpha(5,255-GlassAlpha/2)
+
+
+
+
